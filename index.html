@@ -49,6 +49,21 @@
     .navbar a:hover,a:active{ 
     color: grey;
     }
+    a.effect-shine:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 2s infinite;
+    }
+
+    @-webkit-keyframes shine {
+        from {
+            -webkit-mask-position: 150%;
+        }
+
+        to {
+            -webkit-mask-position: -50%;
+        }
+    }
 </style>
 
 <body id="body">
@@ -88,7 +103,7 @@
                 </h2>
                 <h1 class="mb-6 pt-4 text-2xl font-semibold tracking-tighter text-purple-300 sm:text-5xl title-font"
                     data-aos="fade-up" data-aos-duration="3000">
-                    UniAuth
+                    <a href="#" class="effect-shine">UniAuth</a>
                 </h1>
                 <p class="mx-auto text-base font-medium leading-relaxed text-purple-200 lg:w-2/3" data-aos="fade-up"
                     data-aos-duration="3000">open source, secure, private, extendable OAuth services
